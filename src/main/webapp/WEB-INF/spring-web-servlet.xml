@@ -12,13 +12,22 @@
 
 	<context:component-scan base-package="com.mkyong.web" />
 
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<!--<bean-->
+		<!--class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+		<!--<property name="prefix">-->
+			<!--<value>/WEB-INF/views/jsp/</value>-->
+		<!--</property>-->
+		<!--<property name="suffix">-->
+			<!--<value>.jsp</value>-->
+		<!--</property>-->
+	<!--</bean>-->
+
+	<bean class="com.github.jknack.handlebars.springmvc.HandlebarsViewResolver">
 		<property name="prefix">
-			<value>/WEB-INF/views/jsp/</value>
+			<value>/WEB-INF/views/handlebars/</value>
 		</property>
 		<property name="suffix">
-			<value>.jsp</value>
+			<value>.hbs</value>
 		</property>
 	</bean>
 
